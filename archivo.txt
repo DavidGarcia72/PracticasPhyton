@@ -1,0 +1,5 @@
+			Tareas
+2 Tipos de datos en python
+3 Estructuras de control y iteracion 
+3 Try except
+4 programacion orientada en objetos
