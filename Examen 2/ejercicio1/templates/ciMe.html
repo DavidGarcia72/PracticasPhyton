@@ -1,0 +1,25 @@
+{% extends "encabezado.html" %}
+
+{% block content %}
+<div class="container">
+  <h2>Ciencias Medicas</h2>
+</div>
+
+<div class="container">
+  {% for invest in object_list %}
+  <div class="row">
+    {% if invest.categoria == "CiME" %}
+      <div class="col-md-5 col-md-offset-0">
+    <ul class="list-group list-group-flush">
+  <li class="list-group-item"><b>Titulo:</b> {{ invest.titulo }} </li>
+  <li class="list-group-item"><b>Autor:</b> {{ invest.autor }}</li>
+  <li class="list-group-item"><b>Categoria: </b> Ciencias Medicas</li>
+  <li class="list-group-item"><b>Archivo:</b> <a href="{{ invest.content.url }}">{{ invest.content }}</a></li>
+    </ul
+    </div>
+    </div>
+
+    {% endif %}
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,12 @@
+    {% extends "encabezado.html" %}
+
+    {% block content %}
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <b>Autor: </b> {{ form.autor }} <br>
+    <b>Titulo: </b>{{ form.titulo }} <br><br>
+    <b>Archivo: </b>{{ form.content}} <br>
+    <b>Categoria: </b>{{ form.categoria }} <br>
+    <input type="submit" name="hoa" value="Subir">
+    </form>
+    {% endblock %}

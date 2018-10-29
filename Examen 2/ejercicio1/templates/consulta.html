@@ -1,0 +1,11 @@
+  {% extends "encabezado.html" %}
+
+  {% block content %}
+    <div class="list-group">
+      <a href="{% url 'invest:trabajoCiCom_view'%}" class="list-group-item list-group-item-action">Ciencias Computacionales</a>
+      <a href="{% url 'invest:trabajoCiTi_view'%}" class="list-group-item list-group-item-action">Ciencias de la Tierra</a>
+      <a href="{% url 'invest:trabajoCiNa_view'%}" class="list-group-item list-group-item-action">Ciencias Naturales</a>
+      <a href="{% url 'invest:trabajoCiSo_view'%}" class="list-group-item list-group-item-action">Ciencias Sociales</a>
+      <a href="{% url 'invest:trabajoCiMe_view'%}" class="list-group-item list-group-item-action">Ciencias Medicas</a>
+    </div>
+  {% endblock %}

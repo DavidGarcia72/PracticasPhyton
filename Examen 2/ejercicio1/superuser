@@ -1,0 +1,5 @@
+grant all privileges on 'KamiTweets'.* to 'KamiTweets'@'localhost';
+
+
+goku 
+kakaroto123
