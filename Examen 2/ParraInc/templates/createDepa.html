@@ -1,0 +1,9 @@
+{% extends "encabezado.html" %}
+
+{% block content %}
+<form method="post">
+{% csrf_token %}
+<b>Departamento: </b> {{ form.depa}} <br>
+<input type="submit" name="hoa" value="Subir">
+</form>
+{% endblock %}

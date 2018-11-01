@@ -1,0 +1,11 @@
+{% extends "encabezado.html" %}
+
+{% block content %}
+<form method="post">
+{% csrf_token %}
+<b>software: </b> {{ form.nombreSoftware }} <br>
+<b>funcion: </b>{{ form.funcion }} <br><br>
+<b>departamento: </b>{{ form.departamento}} <br>
+<input type="submit" name="hoa" value="Subir">
+</form>
+{% endblock %}

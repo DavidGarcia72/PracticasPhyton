@@ -1,0 +1,22 @@
+{% extends "encabezado.html" %}
+
+{% block content %}
+<div class="container">
+  <h2>Softwares</h2>
+</div>
+
+<div class="container">
+  {% for soft in object_list %}
+    <div class="row">
+      <div class="col-md-5 col-md-offset-0">
+    <ul class="list-group list-group-flush">
+  <li class="list-group-item"><b>Titulo:</b> {{ soft.nombreSoftware }} </li>
+  <li class="list-group-item"><b>Funcion:</b> {{ soft.funcion }}</li>
+  <li class="list-group-item"><b>Categoria: </b> {{soft.departamento}}</li>
+    </ul
+    </div>
+    </div>
+
+        </div>
+    {% endfor %}
+{% endblock %}
