@@ -1,0 +1,8 @@
+<div class="row">
+  <form method="post">
+      {% csrf_token %}
+      <h3>Realmente deseas borrar el registro:
+      {{object.personaje}} ?</h3>
+      <input type="submit" name="delete" value="Delete">
+  </form>
+</div>

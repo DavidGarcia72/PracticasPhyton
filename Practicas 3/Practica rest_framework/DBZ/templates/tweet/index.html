@@ -1,0 +1,27 @@
+  <body style="background-color:Red">
+    <h1>Que pedo que pex xd</h1>
+    <h3>{{ value }}</h3>
+
+<hr><br>
+    {% if numero > 10000000 %}
+      <h1>XD</h1>
+    {% else %}
+      <h1>D:</h1>
+    {%endif %}
+<hr><br>
+<table border="100">
+  <tr>
+  {% for element in vector %}
+    <td>{{ element }}</td>
+    {% endfor %}
+  </tr>
+</table>
+<hr><br>
+<table border="100">
+  <tr>
+  {% for d in dicci.values %}
+    <td>{{ d }}</td>
+    {% endfor %}
+  </tr>
+</table>
+    </body>
