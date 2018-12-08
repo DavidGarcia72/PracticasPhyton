@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        console.log("It's working, IT'S WOOOORKING exdi!!!!")
+        $.ajax({
+          url:"/api/list_tweet/",
+          method: "GET",
+          success: function(data){
+            // console.log(data);
+            $.each(data, function(key, value){
+              console.log(key);
+              console.log(value);
+              var tweetkey= key
+              var tweetPersonaje= value.personaje
+              var tweetHabilidad= value.habilidad
+              $("#tweet-container").append("<li>"+tweetHabilidad+"</li>")
+            })
+          },
+          error: function(data){
+            console.log("error")
+            console.log(data);
+          }
+        })
+      });
+    </script>
+    <div id="tweet-container">
+
+    </div>
+    <a class="navbar-brand " href="/logout/">Logout</a>
+    <h1>   </h1>
+<li>
+
+
+  {% for ki in object_list %}
+    <ul>
+
+      {{ki.personaje}}   {{ki.user}} |
+        <a href="{% url 'Ki:detail_tweets_view' ki.id %}">View</a>
+        <a href="{% url 'Ki:update_view' ki.id %}">Update</a>
+        <a href="{% url 'Ki:delete_view' ki.id %}">Delete</a>
+    </ul>
+      {% endfor %}
+</li>
+
+</body>
+</html>

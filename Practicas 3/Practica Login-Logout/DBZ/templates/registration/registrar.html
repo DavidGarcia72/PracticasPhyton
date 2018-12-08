@@ -1,0 +1,47 @@
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<form  class="text-center container" method="post">
+  {% csrf_token %}
+      <div class="row">
+        <div class="form-group">
+          <label>Usuario</label>
+          <input type="text" class="form-control" name="username">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label>Nombre</label>
+          <input type="text" class="form-control" name="first_name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label>Apellidos</label>
+          <input type="text" class="form-control" name="last_name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label>Correo</label>
+          <input type="email" class="form-control" name="email">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label>Contraseña</label>
+          <input type="password" class="form-control" name="password1">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label>Confirmar contraseña</label>
+          <input type="password" class="form-control" name="password2">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-lg" name="button">Guardar</button>
+        </div>
+      </div>
+</form>
